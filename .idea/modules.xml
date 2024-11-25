@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/simpleblog.iml" filepath="$PROJECT_DIR$/.idea/simpleblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PHP-MySQL-Blog-Website-with-Admin-Panel-main.iml" filepath="$PROJECT_DIR$/.idea/PHP-MySQL-Blog-Website-with-Admin-Panel-main.iml" />
     </modules>
   </component>
 </project>
