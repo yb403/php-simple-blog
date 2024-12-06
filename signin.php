@@ -1,3 +1,4 @@
+
 <?php
 include 'config/constants.php';
 
@@ -8,23 +9,68 @@ unset($_SESSION['signin-data']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EST-SB</title>
-    <!-- CUSTOM STYLESHEET -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- ICONSCOUT CDN -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!-- GOOGLE FONT(MONTSERATE) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&display=swap" rel="stylesheet"> 
+    <title>IdaaxTools Resellers</title>
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>assets/css/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>assets/css/app.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>assets/css/pages/auth.css">
+    
+    <style>
+         body{
+            height:100vh;
+            background-image: url('<?= ROOT_URL ?>assets/back.jpg');
+            background-position:bottom left;
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+ 
+ div > h1{
+            color:white;
+            font-variant: small-caps;
+        }
+ 
+        .alert__message {
+  padding: 0.8rem 1.4rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.alert__message.error {
+  background:  hsl(346, 87%, 46%, 15%);
+  color: red;
+}
+
+.alert__message.success {
+  background: hsl(156, 100%, 38%, 15%);
+  color: green;
+}
+
+.alert__message.lg {
+  text-align: center;
+}
+    </style>
+    
 </head>
+
 <body>
-<section class="form__section">
-    <div class="container form__section-container">
-        <h2>Sign In</h2> 
-        <?php
+    <div id="auth">
+
+        <div class="row h-100" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+            <div class="col-lg-5 col-12">
+                <div id="auth-left">
+                    <h1 class="auth-title">Sign-in</h1>
+                    <center>
+                    <?php
         if(isset($_SESSION['signup-success'])): 
         ?> 
             <div class="alert__message success">
@@ -43,13 +89,33 @@ unset($_SESSION['signin-data']);
                 </p>
             </div>
         <?php endif; ?>
-        <form action="<?= ROOT_URL ?>signin-logic.php" method="POST">
-            <input type="text" name="username_email" value='<?= $username_email ?>' placeholder="Username or Email">
-            <input type="password" name="password" value='<?= $password ?>' placeholder=" Password">
-            <button type="submit" class="btn" name="submit">Sign in</button>
-            <small>Don't have an account? <a href="signup.php">Sign up</a></small>
-        </form>
+					</center>
+
+                    <form method="post" action="<?= ROOT_URL ?>signin-logic.php">
+                    
+                    <div class="form-group position-relative has-icon-left mb-4">
+                            <input type="text" class="form-control form-control-xl" name="username_email" id="username_email" placeholder="Email" autocomplete="off">
+                            <div class="form-control-icon">
+                                <i class="bi bi-person"></i>
+                            </div>
+                        </div>
+                        <div class="form-group position-relative has-icon-left mb-4">
+                        <input type="password" class="form-control form-control-xl" name="password" id="password" placeholder="Password" autocomplete="off">
+                            <div class="form-control-icon">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+                        </div>
+                        <div class="form-check form-check-lg d-flex align-items-end">
+                                <small>Don't have an account? <a href="signup.php">Sign up</a></small>
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
     </div>
-</section>
 </body>
+
 </html>
