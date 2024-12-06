@@ -6,7 +6,7 @@
   --color-red-light: hsl(346, 87%, 46%, 15%);
   --color-green: #00c476;
   --color-green-light: hsl(156, 100%, 38%, 15%);
-  --color-gray-900: #1e1e66;
+  --color-gray-900: #262630;
   --color-gray-700: #797979;
   --color-gray-300: rgba(242, 242, 254, 0.3);
   --color-gray-200: rgba(242, 242, 254, 0.7);
@@ -399,6 +399,7 @@ footer ul a:hover {
 .dashboard {
   margin-top: 6rem;
   padding: 2rem;
+  height: 70vh
 }
 
 .sidebar__toggle {
@@ -571,11 +572,12 @@ td {
 .form__section {
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 70vh;
   margin: 5rem 0;
 }
 .form__section-container {
   width: var(--form-width);
+ 
 }
 
 .alert__message {
@@ -869,6 +871,7 @@ select {
   /* START  DASHBAORD*/
   .dashboard {
     margin-top: 5rem;
+    height: 100vh
   }
   .dashboard__container {
     grid-template-columns: 1fr;
