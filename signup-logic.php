@@ -50,7 +50,7 @@ if(isset($_POST["submit"])){
                 //,ake sure file is an image
                 $allowed_files = ['png', 'jpg', 'jpeg'];
                 $extension = explode('.', $avatar_name);
-                $extension = end($extension);
+                $extension = strtolower(end($extension));
                 if(in_array($extension,$allowed_files)){
                     //if image not too large
 
