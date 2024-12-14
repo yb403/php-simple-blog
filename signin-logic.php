@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 
             // compare form password with database password
             //if(password_verify($password,$db_password)){
-                if($password == $db_password){
+            if($password == $db_password){
                 // set session for access control
                 $_SESSION['user-id'] = $user_record['id'];
                 $_SESSION['signin-success'] = "User successfully logged in";
