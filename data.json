@@ -1,0 +1,60 @@
+{
+    "commandes": [
+      {
+        "id": 1,
+        "ref": "CMD001",
+        "etat": "Pending",
+        "total": 150.00,
+        "totalPaye": 50.00,
+        "commandeItems": [
+          {
+            "id": 1,
+            "produit": "Product A",
+            "prix": 50.00,
+            "quantite": 1,
+            "commande": null
+          },
+          {
+            "id": 2,
+            "produit": "Product B",
+            "prix": 100.00,
+            "quantite": 1,
+            "commande": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "ref": "CMD002",
+        "etat": "Completed",
+        "total": 200.00,
+        "totalPaye": 200.00,
+        "commandeItems": [
+          {
+            "id": 3,
+            "produit": "Product C",
+            "prix": 200.00,
+            "quantite": 1,
+            "commande": null
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "ref": "CMD003",
+        "etat": "Cancelled",
+        "total": 300.00,
+        "totalPaye": 0.00,
+        "commandeItems": [
+          {
+            "id": 4,
+            "produit": "Product D",
+            "prix": 150.00,
+            "quantite": 2,
+            "commande": null
+          }
+        ]
+      }
+    ]
+  }
+  
